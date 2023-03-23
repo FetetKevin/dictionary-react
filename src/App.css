@@ -1,0 +1,282 @@
+:root {
+    --text-color: #111;
+    --text-soft-color: #6b6b6b;
+    --bg-color: #fff;
+    --border-color: rgb(200, 200, 200);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.global {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-color);
+    padding-bottom: 40px;
+}
+
+.global.dark {
+    --text-color: #fff;
+    --text-soft-color: #6b6b6b;
+    --bg-color: #111;
+    --border-color: rgb(200, 200, 200);
+    background-color: var(--bg-color);
+}
+
+.global.serif {
+    font-family: serif;
+}
+
+.global.sans-serif {
+    font-family: sans-serif;
+}
+
+.global.monospace {
+    font-family: monospace;
+}
+
+body {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 810px;
+    height: auto;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+header .logo {
+    font-size: 40px;
+    margin-right: auto;
+    color: rgb(166, 166, 166);
+}
+
+header select {
+    height: 44px;
+    width: 130px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid rgb(200, 200, 200);
+    background-color: #fff;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #111;
+}
+
+header .btn {
+    display: flex;
+    border-left: 1px solid rgb(200, 200, 200);
+    margin-left: 15px;
+}
+
+header .slider {
+    background-color: #adadad;
+    height: 20px;
+    width: 40px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+header .dark {
+    justify-content: flex-end;
+}
+
+header .circle {
+    border: 4px solid var(--text-color);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+}
+
+header .icon {
+    font-size: 22px;
+    margin-left: 10px;
+    color: var(--text-color);
+}
+
+main {
+    margin-top: 28px;
+}
+
+main form {
+    display: flex;
+    width: 100%;
+    height: 52px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+}
+
+main .content {
+    padding: 0 20px;
+}
+
+main form:focus-within {
+    outline-style: solid;
+    outline-color: #a345ed;
+}
+
+main input {
+    width: 100%;
+    padding: 22px 18px;
+    outline: none;
+    font-size: 1.5rem;
+    border: 0;
+    font-weight: 600;
+    font-style: oblique;
+    background-color: #e2e2e2;
+    color: #111;
+}
+
+main button {
+    width: 60px;
+    border: 0;
+    background-color: #e2e2e2;
+    outline: none;
+}
+
+main .search {
+    font-size: 1.3rem;
+    color: #a345ed;
+}
+
+main .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main h1 {
+    font-size: 3rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+
+main h2 {
+    font-size: 1.4rem;
+    color: #a345ed;
+    font-weight: 400;
+    margin-top: 5px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+main .top {
+    margin-top: 50px;
+}
+
+main .play {
+    height: 70px;
+    width: 70px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    position: relative;
+    background-color: #dcc6ec;
+    cursor: pointer;
+}
+
+main .fa-play {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(65%, -50%);
+    color: #a345ed;
+}
+
+main h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 28px;
+    color: var(--text-color);
+}
+main .meaning {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-soft-color);
+    margin-top: 28px;
+}
+
+main ul {
+    font-size: 1.3rem;
+    padding: 0 25px;
+    margin-top: 28px;
+    list-style: none;
+}
+
+ul li::before {
+    content: "\2022";
+    color: #a345ed;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    font-size: 1.5rem;
+}
+
+main li {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+main .synonyms {
+    display: flex;
+    align-items: center;
+}
+
+main .synonyms h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-soft-color);
+    margin-top: 18px;
+}
+
+main .synonyms h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #a345ed;
+    margin-top: 18px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+main .source {
+    display: flex;
+    align-items: center;
+    margin-top: 28px;
+    font-size: 1rem;
+}
+main .source h4 {
+    color: var(--text-color);
+}
+
+main .source a {
+    color: var(--text-soft-color);
+    margin-left: 30px;
+}
+
+@media all and (max-width: 450px) {
+    .global {
+        min-height: 100%;
+    }
+    .container {
+        width: 100%;
+        padding: 30px 10px;
+    }
+}
